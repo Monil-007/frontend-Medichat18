@@ -31,7 +31,7 @@ const Auth = () => {
         console.log(form);
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'http://localhost:3000';
+        const URL = 'https://medichat18-backend.onrender.com';
         //const URL = 'https://medichat18.herokuapp.com/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/auth/${isSignup ? 'signup' : 'signin'}`, {
